@@ -1,0 +1,60 @@
+# Environment files
+# Ignore real environment files throughout the monorepo.
+**/.env
+**/.env.*
+!**/.env.example
+
+# Symfony secrets and runtime files
+/backend/config/secrets/
+/backend/config/jwt/*.pem
+/backend/public/bundles/
+/backend/public/uploads/
+/backend/var/
+/backend/vendor/
+/backend/.phpunit.result.cache
+
+# Node.js and Next.js
+/frontend/node_modules/
+/frontend/.next/
+/frontend/out/
+/frontend/build/
+/frontend/.vercel/
+/frontend/coverage/
+
+# TypeScript and tool caches
+*.tsbuildinfo
+**/.cache/
+**/.eslintcache
+**/.parcel-cache/
+**/.turbo/
+
+# Logs and temporary files
+*.log
+*.pid
+*.tmp
+*.temp
+*.swp
+*~
+~$*
+**/*.bkp
+.$*
+
+# IDE metadata and local settings
+.idea/
+.vscode/
+*.iml
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Nested Git repositories
+/frontend/.git/
+
+# Test and generated files
+.phpunit.cache/
+.pytest_cache/
+coverage/
+

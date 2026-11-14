@@ -1,0 +1,55 @@
+Step 2: Create the Verification Endpoint
+Add a new endpoint to handle the verification request sent by Next.js. We will decode the token, find the user, and change their status to active.
+
+
+<?php
+    // In backend/src/Controller/AuthController.php
+
+    use Lexik\Bundle\JWTAuthenticationBundle\Encoder\JWTEncoderInterface;
+    use Lexik\Bundle\JWTAuthenticationBundle\Exception\JWTDecodeFailureException;
+
+    #[Route('/api/verify-email', name: 'api_verify_email', methods: ['POST'])]
+    public function verifyEmail(
+        Request $request, 
+        JWTEncoderInterface $jwtEncoder,
+        EntityManagerInterface $em
+    ): JsonResponse {
+        $data = json_decode($request->getContent(), true);
+        $token = $data['token'] ?? null;
+
+        if (!$token) {
+            return new JsonResponse(['error' => 'Token is required'], 400);
+        }
+
+        try {
+            // Decode the token. This throws an exception if invalid or expired
+            $decoded = $jwtEncoder->decode($token);
+            
+            if (!isset($decoded['purpose']) || $decoded['purpose'] !== 'email_verification') {
+                 return new JsonResponse(['error' => 'Invalid token purpose'], 400);
+            }
+
+            // 'username' is usually injected by LexikJWT containing the user identifier (email)
+            $email = $decoded['username'];
+            $user = $em->getRepository(AppUser::class)->findOneBy(['email' => $email]);
+
+            if (!$user) {
+                return new JsonResponse(['error' => 'User not found'], 404);
+            }
+
+            if ($user->getStatus() === 'active') {
+                return new JsonResponse(['message' => 'Email is already verified'], 200);
+            }
+
+            // Update user status
+            $user->setStatus('active');
+            $em->flush();
+
+            return new JsonResponse(['message' => 'Email successfully verified'], 200);
+
+        } catch (JWTDecodeFailureException $e) {
+            return new JsonResponse(['error' => 'Token is invalid or has expired'], 401);
+        } catch (\Exception $e) {
+            return new JsonResponse(['error' => 'An error occurred during verification'], 500);
+        }
+    }

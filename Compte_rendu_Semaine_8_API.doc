@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Compte rendu - Semaine 8 - Tests API REST</title>
+  <style>
+    body{font-family:Arial,sans-serif;max-width:980px;margin:36px auto;line-height:1.5;color:#1f2937}
+    h1{color:#0a1b44;border-bottom:2px solid #0a1b44;padding-bottom:10px}
+    h2{color:#164e63;margin-top:30px}
+    h3{color:#374151}
+    table{border-collapse:collapse;width:100%;margin:12px 0}
+    th,td{border:1px solid #cbd5e1;padding:8px;vertical-align:top}
+    th{background:#e2e8f0}
+    code{background:#f1f5f9;padding:2px 4px}
+    .info{background:#eff6ff;border-left:4px solid #2563eb;padding:10px}
+    .warning{background:#fff7ed;border-left:4px solid #f97316;padding:10px}
+    .status{font-weight:bold;color:#9a3412}
+  </style>
+</head>
+<body>
+  <h1>Compte rendu - Atelier Test et validation des logiciels</h1>
+  <p>
+    <strong>Projet :</strong> The Catalyst / Intranet<br>
+    <strong>Séance :</strong> Semaine 8 - Tests des API REST<br>
+    <strong>Étudiant :</strong> Sohib BenGhilline<br>
+    <strong>Date :</strong> 11 novembre 2026
+  </p>
+
+  <div class="info">
+    Ce compte rendu a été préparé à partir du guide de la semaine 8 et de l'analyse du code
+    Symfony présent dans le projet. Les tests qui nécessitent un serveur et une base de données
+    ne sont pas déclarés comme réussis sans exécution réelle.
+  </div>
+
+  <h2>1. Objectifs</h2>
+  <ul>
+    <li>Identifier les endpoints REST et leurs méthodes HTTP.</li>
+    <li>Contrôler l'authentification JWT et les droits d'accès.</li>
+    <li>Vérifier les codes HTTP et la structure des réponses JSON.</li>
+    <li>Couvrir les cas nominaux et les scénarios négatifs.</li>
+  </ul>
+
+  <h2>2. Périmètre observé</h2>
+  <p>
+    L'API est exposée sous le préfixe <code>/api</code>. Les endpoints protégés utilisent un
+    jeton JWT Bearer et nécessitent le rôle <code>ROLE_USER</code>. Les routes d'inscription,
+    de vérification d'e-mail et de réinitialisation du mot de passe sont publiques.
+  </p>
+  <table>
+    <tr><th>Fonction</th><th>Méthode</th><th>Endpoint</th><th>Authentification</th></tr>
+    <tr><td>Inscription</td><td>POST</td><td><code>/api/signup</code></td><td>Non</td></tr>
+    <tr><td>Vérification e-mail</td><td>POST</td><td><code>/api/verify-email</code></td><td>Non</td></tr>
+    <tr><td>Connexion</td><td>POST</td><td><code>/api/login</code></td><td>Non</td></tr>
+    <tr><td>Profil courant</td><td>GET</td><td><code>/api/user/me</code></td><td>JWT</td></tr>
+    <tr><td>Entreprises</td><td>GET / POST / PATCH</td><td><code>/api/companies</code></td><td>JWT selon l'action</td></tr>
+    <tr><td>Publications</td><td>GET / POST</td><td><code>/api/posts</code></td><td>JWT pour créer</td></tr>
+    <tr><td>Messagerie</td><td>GET / POST</td><td><code>/api/messages/{userId}</code></td><td>JWT</td></tr>
+    <tr><td>Pièces jointes</td><td>POST / GET / PATCH</td><td><code>/api/attachments</code> et <code>/api/download-requests</code></td><td>JWT</td></tr>
+  </table>
+
+  <h2>3. Préconditions et format des requêtes</h2>
+  <ul>
+    <li>Backend Symfony démarré et base PostgreSQL disponible.</li>
+    <li>Migrations Doctrine appliquées.</li>
+    <li>Un compte de test actif et un jeton JWT valide pour les routes privées.</li>
+    <li>En-têtes : <code>Content-Type: application/json</code> et
+      <code>Authorization: Bearer &lt;token&gt;</code> si nécessaire.</li>
+  </ul>
+
+  <h2>4. Cas de test API</h2>
+  <p>Les résultats ci-dessous correspondent aux comportements attendus d'après le code source.</p>
+  <table>
+    <tr>
+      <th>ID</th><th>Endpoint et scénario</th><th>Corps / condition</th>
+      <th>Code attendu</th><th>Schéma attendu</th><th>Résultat</th>
+    </tr>
+    <tr>
+      <td>API-01<br><strong>Nominal</strong></td>
+      <td><code>POST /api/signup</code><br>Inscription valide</td>
+      <td><code>name</code>, <code>email</code> et <code>password</code> renseignés</td>
+      <td>201</td>
+      <td>Objet JSON contenant <code>message</code></td>
+      <td class="status">À exécuter</td>
+    </tr>
+    <tr>
+      <td>API-02<br><strong>Négatif</strong></td>
+      <td><code>POST /api/signup</code><br>Champ obligatoire absent</td>
+      <td><code>email</code> ou <code>password</code> absent</td>
+      <td>400</td>
+      <td><code>{"message": "Missing required fields"}</code></td>
+      <td class="status">À exécuter</td>
+    </tr>
+    <tr>
+      <td>API-03<br><strong>Négatif</strong></td>
+      <td><code>POST /api/signup</code><br>E-mail déjà utilisé</td>
+      <td>Réutiliser un e-mail existant</td>
+      <td>409</td>
+      <td>Objet JSON contenant <code>message</code></td>
+      <td class="status">À exécuter</td>
+    </tr>
+    <tr>
+      <td>API-04<br><strong>Nominal</strong></td>
+      <td><code>POST /api/verify-email</code><br>Token valide</td>
+      <td><code>{"token": "&lt;jwt_verification&gt;"}</code></td>
+      <td>200</td>
+      <td>Objet JSON contenant <code>message</code></td>
+      <td class="status">À exécuter</td>
+    </tr>
+    <tr>
+      <td>API-05<br><strong>Négatif</strong></td>
+      <td><code>POST /api/verify-email</code><br>Token absent ou invalide</td>
+      <td>Corps vide, token invalide ou expiré</td>
+      <td>400 ou 401</td>
+      <td>Objet JSON contenant <code>message</code></td>
+      <td class="status">À exécuter</td>
+    </tr>
+    <tr>
+      <td>API-06<br><strong>Nominal</strong></td>
+      <td><code>GET /api/user/me</code><br>Utilisateur authentifié</td>
+      <td>JWT valide</td>
+      <td>200</td>
+      <td><code>id</code>, <code>email</code>, <code>name</code>, <code>roles</code>, <code>companies</code></td>
+      <td class="status">À exécuter</td>
+    </tr>
+    <tr>
+      <td>API-07<br><strong>Négatif</strong></td>
+      <td><code>GET /api/user/me</code><br>Sans authentification</td>
+      <td>En-tête Authorization absent</td>
+      <td>401</td>
+      <td>Réponse JSON d'erreur ou réponse de sécurité Symfony</td>
+      <td class="status">À exécuter</td>
+    </tr>
+  </table>
+
+  <h2>5. Analyse des résultats</h2>
+  <p>
+    L'analyse statique confirme la présence des routes, des validations de champs et des
+    réponses JSON prévues. Les cas API-02, API-03 et API-05 couvrent les erreurs de saisie,
+    les conflits et les jetons invalides. Le cas API-07 vérifie le contrôle d'accès.
+  </p>
+  <div class="warning">
+    <strong>Statut de la campagne :</strong> non exécutée dans l'environnement observé.
+    Aucun code obtenu ni résultat « passant » ne doit être ajouté avant l'exécution effective
+    de la collection avec le backend et la base de données démarrés.
+  </div>
+
+  <h2>6. Conclusion et suite à donner</h2>
+  <p>
+    Le périmètre couvre les exigences principales de la séance et contient quatre scénarios
+    négatifs pour trois scénarios nominaux. La prochaine étape consiste à importer ces cas dans
+    Postman, Bruno ou Newman, à exécuter la collection, puis à remplacer la colonne
+    « Résultat » par le code réellement obtenu et le statut passant/échec.
+  </p>
+  <p>
+    Il faudra également archiver la collection exportée, le rapport d'exécution et les éventuels
+    messages d'erreur afin de rendre le livrable reproductible.
+  </p>
+</body>
+</html>

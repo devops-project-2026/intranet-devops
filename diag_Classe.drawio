@@ -1,0 +1,518 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="SoLbHoaeoUEuo7yB6Sa_">
+    <mxGraphModel dx="3171" dy="2043" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="User" vertex="1">
+          <mxGeometry height="520" width="360" x="-180" y="-1040" as="geometry">
+            <mxRectangle height="30" width="90" x="340" y="200" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-2" parent="HUBDKP9LVJNCPG4XZzU4-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - email: string?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - roles: string[]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - password: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - name: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - avatarUrl: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - status: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - lastLoginAt: DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - bio: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - professionalTitle: string?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="154" width="360" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-3" parent="HUBDKP9LVJNCPG4XZzU4-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="360" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-4" parent="HUBDKP9LVJNCPG4XZzU4-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getEmail(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setEmail(email: string): AppUser&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getUserIdentifier(): string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getRoles(): string[]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setRoles(roles: string[]): AppUser&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getPassword(): string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setPassword(password: string): AppUser&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + eraseCredentials(): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getName(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setName(name: string?): AppUser&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getAvatarUrl(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setAvatarUrl(avatarUrl: string?): AppUser&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getStatus(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setStatus(status: string?): AppUser&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getLastLoginAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setLastLoginAt(lastLoginAt: DateTimeInterface?): AppUser&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getBio(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setBio(bio: string?): AppUser&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getProfessionalTitle(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setProfessionalTitle(professionalTitle: string?): AppUser&lt;/div&gt;" vertex="1">
+          <mxGeometry height="332" width="360" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Company" vertex="1">
+          <mxGeometry height="690" width="380" x="1070" y="-1020" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-6" parent="HUBDKP9LVJNCPG4XZzU4-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - name: string?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - legalName: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - logoUrl: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - description: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - sector: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - stage: string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - status: string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - cohort: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - foundedAt: DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - website: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - createdBy: AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - createdAt: DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - updatedAt: DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="224" width="380" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-7" parent="HUBDKP9LVJNCPG4XZzU4-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="18" width="380" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-8" parent="HUBDKP9LVJNCPG4XZzU4-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getName(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setName(name: string): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getLegalName(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setLegalName(legalName: string?): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getLogoUrl(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setLogoUrl(logoUrl: string?): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getDescription(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setDescription(description: string?): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getSector(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setSector(sector: string?): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getStage(): string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setStage(stage: string): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getStatus(): string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setStatus(status: string): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCohort(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCohort(cohort: string?): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getFoundedAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setFoundedAt(foundedAt: DateTimeInterface?): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getWebsite(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setWebsite(website: string?): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedBy(): AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCreatedBy(createdBy: AppUser?): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCreatedAt(createdAt: DateTimeInterface): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getUpdatedAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setUpdatedAt(updatedAt: DateTimeInterface): Company&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + touch(): Company&lt;/div&gt;" vertex="1">
+          <mxGeometry height="422" width="380" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-10" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CompanyMember" vertex="1">
+          <mxGeometry height="408" width="400" x="500" y="-610" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-11" parent="HUBDKP9LVJNCPG4XZzU4-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - role: string&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - title: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - ownershipPercent: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - isPrimaryContact: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - status: string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - joinedAt: DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="400" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-12" parent="HUBDKP9LVJNCPG4XZzU4-10" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="400" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-13" parent="HUBDKP9LVJNCPG4XZzU4-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCompany(): Company?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCompany(company: Company?): CompanyMember&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getUser(): AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setUser(user: AppUser?): CompanyMember&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getRole(): string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setRole(role: string): CompanyMember&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getTitle(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setTitle(title: string?): CompanyMember&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getOwnershipPercent(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setOwnershipPercent(ownershipPercent: string?): CompanyMember&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + isPrimaryContact(): bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setIsPrimaryContact(isPrimaryContact: bool): CompanyMember&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getStatus(): string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setStatus(status: string): CompanyMember&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getJoinedAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setJoinedAt(joinedAt: DateTimeInterface): CompanyMember&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="400" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-14" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Post" vertex="1">
+          <mxGeometry height="270" width="310" x="-180" y="-490" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-15" parent="HUBDKP9LVJNCPG4XZzU4-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - content: string?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - author: AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - company: Company?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - createdAt: DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="84" width="310" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-16" parent="HUBDKP9LVJNCPG4XZzU4-14" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="310" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-17" parent="HUBDKP9LVJNCPG4XZzU4-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getContent(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setContent(content: string): Post&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getAuthor(): AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setAuthor(author: AppUser?): Post&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCompany(): Company?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCompany(company: Company?): Post&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCreatedAt(createdAt: DateTimeInterface): Post&lt;/div&gt;" vertex="1">
+          <mxGeometry height="152" width="310" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-18" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Comment&amp;nbsp;" vertex="1">
+          <mxGeometry height="240" width="340" x="60" y="-170" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-19" parent="HUBDKP9LVJNCPG4XZzU4-18" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - content: string?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - post: Post?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - createdAt: DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="64" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-20" parent="HUBDKP9LVJNCPG4XZzU4-18" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-21" parent="HUBDKP9LVJNCPG4XZzU4-18" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getContent(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setContent(content: string): Comment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getAuthor(): AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setAuthor(author: AppUser?): Comment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getPost(): Post?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setPost(post: Post?): Comment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCreatedAt(createdAt: DateTimeInterface): Comment&lt;/div&gt;" vertex="1">
+          <mxGeometry height="142" width="340" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-22" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="PostLike&amp;nbsp;" vertex="1">
+          <mxGeometry height="170" width="250" x="370" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-23" parent="HUBDKP9LVJNCPG4XZzU4-22" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - createdAt: DateTimeInterface?&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="34" width="250" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-24" parent="HUBDKP9LVJNCPG4XZzU4-22" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-25" parent="HUBDKP9LVJNCPG4XZzU4-22" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getUser(): AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setUser(user: AppUser?): PostLike&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getPost(): Post?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setPost(post: Post?): PostLike&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedAt(): DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="102" width="250" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-26" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="PostAttachment&amp;nbsp;" vertex="1">
+          <mxGeometry height="348" width="340" x="-340" y="-190" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-27" parent="HUBDKP9LVJNCPG4XZzU4-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - fileName: string?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - filePath: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - mimeType: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - fileSize: int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - accessType: string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - createdAt: DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="340" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-28" parent="HUBDKP9LVJNCPG4XZzU4-26" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-29" parent="HUBDKP9LVJNCPG4XZzU4-26" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getFileName(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setFileName(fileName: string): PostAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getFilePath(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setFilePath(filePath: string): PostAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getMimeType(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setMimeType(mimeType: string): PostAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getFileSize(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setFileSize(fileSize: int): PostAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getAccessType(): string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setAccessType(accessType: string): PostAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getPost(): Post?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setPost(post: Post?): PostAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedAt(): DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="340" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-31" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DownloadRequest&amp;nbsp;" vertex="1">
+          <mxGeometry height="270" width="420" x="425" y="-980" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-32" parent="HUBDKP9LVJNCPG4XZzU4-31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - status: string&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - attachment: PostAttachment?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - company: Company?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - createdAt: DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="74" width="420" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-33" parent="HUBDKP9LVJNCPG4XZzU4-31" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="420" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-34" parent="HUBDKP9LVJNCPG4XZzU4-31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getStatus(): string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setStatus(status: string): DownloadRequest&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getRequester(): AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setRequester(requester: AppUser?): DownloadRequest&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getAttachment(): PostAttachment?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setAttachment(attachment: PostAttachment?): DownloadRequest&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCompany(): Company?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCompany(company: Company?): DownloadRequest&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedAt(): DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="162" width="420" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-36" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Story&amp;nbsp;" vertex="1">
+          <mxGeometry height="280" width="420" x="-770" y="-1010" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-37" parent="HUBDKP9LVJNCPG4XZzU4-36" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - content: string?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - author: AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - createdAt: DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - expiresAt: DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="94" width="420" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-38" parent="HUBDKP9LVJNCPG4XZzU4-36" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="420" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-39" parent="HUBDKP9LVJNCPG4XZzU4-36" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getContent(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setContent(content: string?): Story&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getAuthor(): AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setAuthor(author: AppUser?): Story&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCreatedAt(createdAt: DateTimeInterface): Story&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getExpiresAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setExpiresAt(expiresAt: DateTimeInterface): Story&lt;/div&gt;" vertex="1">
+          <mxGeometry height="152" width="420" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-40" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Message&amp;nbsp;" vertex="1">
+          <mxGeometry height="250" width="420" x="-860" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-41" parent="HUBDKP9LVJNCPG4XZzU4-40" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - content: string?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - createdAt: DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="64" width="420" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-42" parent="HUBDKP9LVJNCPG4XZzU4-40" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="420" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-43" parent="HUBDKP9LVJNCPG4XZzU4-40" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getContent(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setContent(content: string): Message&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getSender(): AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setSender(sender: AppUser?): Message&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getReceiver(): AppUser?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setReceiver(receiver: AppUser?): Message&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedAt(): DateTimeInterface?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setCreatedAt(createdAt: DateTimeInterface): Message&lt;/div&gt;" vertex="1">
+          <mxGeometry height="152" width="420" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-44" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="MessageAttachment&amp;nbsp;" vertex="1">
+          <mxGeometry height="320" width="420" x="-820" y="-150" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-45" parent="HUBDKP9LVJNCPG4XZzU4-44" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; - fileName: string?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - filePath: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - mimeType: string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - fileSize: int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - createdAt: DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="94" width="420" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-46" parent="HUBDKP9LVJNCPG4XZzU4-44" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="420" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="HUBDKP9LVJNCPG4XZzU4-47" parent="HUBDKP9LVJNCPG4XZzU4-44" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + getId(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getFileName(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setFileName(fileName: string): MessageAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getFilePath(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setFilePath(filePath: string): MessageAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getMimeType(): string?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setMimeType(mimeType: string): MessageAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getFileSize(): int?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setFileSize(fileSize: int): MessageAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getMessage(): Message?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setMessage(message: Message?): MessageAttachment&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getCreatedAt(): DateTimeInterface?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="192" width="420" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-2" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.998;entryY=0.365;entryDx=0;entryDy=0;endArrow=none;endFill=0;entryPerimeter=0;" target="HUBDKP9LVJNCPG4XZzU4-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-340" y="-686" />
+              <mxPoint x="-340" y="-470" />
+              <mxPoint x="-400" y="-470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-21" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9132" y="-2" as="geometry">
+            <mxPoint x="-5" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-34" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8776" y="1" as="geometry">
+            <mxPoint x="7" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-3" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;sender&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.7423" y="1" as="geometry">
+            <mxPoint x="7" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-8" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Envoyer" vertex="1">
+          <mxGeometry relative="1" x="0.157" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-4" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="HUBDKP9LVJNCPG4XZzU4-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-17" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.0583" as="geometry">
+            <mxPoint x="80" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-18" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8429" y="-2" as="geometry">
+            <mxPoint y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-1" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;author&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.3667" y="-4" as="geometry">
+            <mxPoint x="14" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-2" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Partager" vertex="1">
+          <mxGeometry relative="1" x="0.1824" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-6" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.008;entryY=0.69;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.003;exitY=0.206;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-180" y="-330" />
+              <mxPoint x="-239" y="-330" />
+              <mxPoint x="-239" y="-540" />
+            </Array>
+            <mxPoint x="-180.00000000000006" y="-257.76799999999986" as="sourcePoint" />
+            <mxPoint x="-181.94999999999987" y="-540.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-26" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.8524" as="geometry">
+            <mxPoint x="-20" y="-53" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-32" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8896" y="1" as="geometry">
+            <mxPoint x="14" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-15" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;author&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.8253" as="geometry">
+            <mxPoint x="-3" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-16" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Créer" vertex="1">
+          <mxGeometry relative="1" x="0.3311" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-8" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="HUBDKP9LVJNCPG4XZzU4-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-22" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8254" y="3" as="geometry">
+            <mxPoint x="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-36" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8215" y="-2" as="geometry">
+            <mxPoint x="6" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-13" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;post&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.4214" as="geometry">
+            <mxPoint x="12" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-14" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Contenir" vertex="1">
+          <mxGeometry relative="1" x="0.3715" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-9" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" target="HUBDKP9LVJNCPG4XZzU4-45">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-360" y="-316" />
+              <mxPoint x="-360" y="-67" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-19" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8853" y="-4" as="geometry">
+            <mxPoint y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-35" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9309" y="-1" as="geometry">
+            <mxPoint x="8" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-11" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;message&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.6917" y="2" as="geometry">
+            <mxPoint x="9" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-12" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Contenir" vertex="1">
+          <mxGeometry relative="1" x="0.0175" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-11" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0;entryY=0.844;entryDx=0;entryDy=0;entryPerimeter=0;" target="HUBDKP9LVJNCPG4XZzU4-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="-406" />
+            </Array>
+            <mxPoint x="960" y="-617" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-28" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9455" y="1" as="geometry">
+            <mxPoint x="18" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-29" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.7585" y="2" as="geometry">
+            <mxPoint x="2" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-30" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;company&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.6125" y="-1" as="geometry">
+            <mxPoint x="-21" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-31" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Associé " vertex="1">
+          <mxGeometry relative="1" x="-0.2301" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-12" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="HUBDKP9LVJNCPG4XZzU4-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="-760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-27" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.7892" y="2" as="geometry">
+            <mxPoint x="-13" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-29" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8667" y="-1" as="geometry">
+            <mxPoint y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-27" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;requester&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.5772" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-28" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Envoyer" vertex="1">
+          <mxGeometry relative="1" x="0.0794" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-13" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="-522" />
+              <mxPoint x="400" y="-680" />
+            </Array>
+            <mxPoint x="180" y="-680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-30" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.9083" y="-1" as="geometry">
+            <mxPoint x="-12" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-44" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8646" y="1" as="geometry">
+            <mxPoint x="1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-25" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;user&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.79" y="-3" as="geometry">
+            <mxPoint x="-20" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-26" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Etre" vertex="1">
+          <mxGeometry relative="1" x="-0.1897" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-14" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.999;entryY=0.97;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="HUBDKP9LVJNCPG4XZzU4-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="-550" />
+              <mxPoint x="180" y="-550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-24" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.896" y="-2" as="geometry">
+            <mxPoint x="18" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-31" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.872" as="geometry">
+            <mxPoint x="-1" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-18" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;author&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.7497" y="-1" as="geometry">
+            <mxPoint x="9" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-19" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Commenter" vertex="1">
+          <mxGeometry relative="1" x="-0.1237" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-15" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="-422" />
+              <mxPoint x="180" y="-170" />
+            </Array>
+            <mxPoint x="160" y="-422.0000000000002" as="sourcePoint" />
+            <mxPoint x="175" y="-170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-25" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.7897" y="1" as="geometry">
+            <mxPoint x="14" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-20" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;post&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.8519" as="geometry">
+            <mxPoint x="8" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-21" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9087" y="1" as="geometry">
+            <mxPoint x="-3" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-22" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Avoir" vertex="1">
+          <mxGeometry relative="1" x="0.0575" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-16" edge="1" parent="1" source="HUBDKP9LVJNCPG4XZzU4-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.672;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="HUBDKP9LVJNCPG4XZzU4-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="148" />
+              <mxPoint x="20" y="-220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-23" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.6918" y="-2" as="geometry">
+            <mxPoint x="64" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-37" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8441" y="-1" as="geometry">
+            <mxPoint x="9" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-23" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;post&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.9215" y="-2" as="geometry">
+            <mxPoint x="18" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-24" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Avoir" vertex="1">
+          <mxGeometry relative="1" x="-0.3632" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-48" edge="1" parent="1" source="DoSjIh1cAwvtLAGUWLvW-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="HUBDKP9LVJNCPG4XZzU4-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="325" y="-330" />
+              <mxPoint x="460" y="-330" />
+              <mxPoint x="460" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-50" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8676" y="-1" as="geometry">
+            <mxPoint x="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-33" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Aimer" vertex="1">
+          <mxGeometry relative="1" x="-0.1919" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-46" parent="1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="30" x="290" y="-620" as="geometry" />
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-47" edge="1" parent="1" source="DoSjIh1cAwvtLAGUWLvW-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.994;entryY=0.714;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="HUBDKP9LVJNCPG4XZzU4-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="178" y="-616" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DoSjIh1cAwvtLAGUWLvW-49" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-47" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.4214" y="-1" as="geometry">
+            <mxPoint x="-20" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-32" connectable="0" parent="DoSjIh1cAwvtLAGUWLvW-47" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;user&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0446" as="geometry">
+            <mxPoint x="-16" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.865;entryDx=0;entryDy=0;endArrow=none;endFill=0;entryPerimeter=0;" target="HUBDKP9LVJNCPG4XZzU4-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-300" y="-620" />
+              <mxPoint x="-300" y="-440" />
+              <mxPoint x="-440" y="-440" />
+            </Array>
+            <mxPoint x="-180" y="-620" as="sourcePoint" />
+            <mxPoint x="-400" y="-381" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-5" connectable="0" parent="BES2t2DZFx2xGEdQfrWX-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9132" y="-2" as="geometry">
+            <mxPoint x="2" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-6" connectable="0" parent="BES2t2DZFx2xGEdQfrWX-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8776" y="1" as="geometry">
+            <mxPoint x="8" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-7" connectable="0" parent="BES2t2DZFx2xGEdQfrWX-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 12px; text-align: left; text-wrap-mode: wrap; background-color: rgb(236, 236, 236);&quot;&gt;receiver&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.7423" y="1" as="geometry">
+            <mxPoint x="9" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BES2t2DZFx2xGEdQfrWX-10" connectable="0" parent="BES2t2DZFx2xGEdQfrWX-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Recevoir" vertex="1">
+          <mxGeometry relative="1" x="-0.0906" y="-2" as="geometry">
+            <mxPoint x="2" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
