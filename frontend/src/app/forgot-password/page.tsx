@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
+import { useState, Suspense } from 'react';
 import { Mail, Shield, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -11,22 +11,15 @@ function ForgotPasswordContent() {
   const inviteEmail = searchParams.get('email') || '';
   const invited = searchParams.get('invited') === '1';
   
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(inviteEmail);
   const [code, setCode] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [step, setStep] = useState(1);
   const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  const [success, setSuccess] = useState(
+    invited ? 'Your account was created. Use the code sent to your email to set a new password.' : ''
+  );
   const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    if (inviteEmail && email === '') {
-      setEmail(inviteEmail);
-    }
-    if (invited && success === '') {
-      setSuccess('Your account was created. Use the code sent to your email to set a new password.');
-    }
-  }, [inviteEmail, invited, email, success]);
 
   const handleSendCode = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,8 +41,8 @@ function ForgotPasswordContent() {
 
       setStep(2);
       setSuccess('If this account exists, a 6-digit code has been sent to your email.');
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setIsLoading(false);
     }
@@ -75,8 +68,8 @@ function ForgotPasswordContent() {
       }
 
       setStep(3);
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setIsLoading(false);
     }

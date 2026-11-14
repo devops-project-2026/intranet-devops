@@ -8,13 +8,15 @@ function VerifyEmailContent() {
   const searchParams = useSearchParams();
   const token = searchParams.get('token');
 
-  const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
-  const [message, setMessage] = useState('Verifying your email...');
+  const [status, setStatus] = useState<'loading' | 'success' | 'error'>(token ? 'loading' : 'error');
+  const [message, setMessage] = useState(
+    token
+      ? 'Verifying your email...'
+      : 'No verification token provided. Are you sure you copied the correct link?'
+  );
 
   useEffect(() => {
     if (!token) {
-      setStatus('error');
-      setMessage('No verification token provided. Are you sure you copied the correct link?');
       return;
     }
 
@@ -38,7 +40,7 @@ function VerifyEmailContent() {
           setStatus('error');
           setMessage(data.message || data.error || 'The token is invalid or has expired.');
         }
-      } catch (error) {
+      } catch {
         setStatus('error');
         setMessage('Network error occurred while trying to verify your email. Please try again later.');
       }
