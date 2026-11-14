@@ -18,6 +18,7 @@ RUN apk add --no-cache openssl postgresql-dev \
 WORKDIR /app
 COPY --from=dependencies /app/vendor ./vendor
 COPY . .
+RUN touch .env
 COPY docker/entrypoint.sh /usr/local/bin/backend-entrypoint
 RUN chmod +x /usr/local/bin/backend-entrypoint
 
