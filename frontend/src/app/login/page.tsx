@@ -120,7 +120,7 @@ export default function LoginPage() {
 
         <div className="flex-1 flex flex-col justify-center max-w-[420px] w-full mx-auto md:mx-0">
           <h2 className="text-4xl md:text-[42px] font-bold text-gray-900 mb-2 tracking-tight">
-            Welcome back.
+            Welcome to Catalyst.
           </h2>
           <p className="text-[15px] text-gray-500 mb-10">
             Sign in to your founder account to continue.
