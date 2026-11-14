@@ -1,0 +1,9 @@
+vendor
+var
+public/uploads
+.env*
+!.env.example
+config/jwt/*.pem
+Dockerfile
+.dockerignore
+compose*.yaml
