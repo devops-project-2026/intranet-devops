@@ -12,7 +12,7 @@ RUN composer install \
 
 FROM php:8.3-cli-alpine
 
-RUN apk add --no-cache openssl \
+RUN apk add --no-cache openssl postgresql-dev \
     && docker-php-ext-install pdo_pgsql
 
 WORKDIR /app
